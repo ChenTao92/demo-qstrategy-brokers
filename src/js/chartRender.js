@@ -2,7 +2,7 @@
  * @Author: taochen
  * @Date:   2016-11-22 11:14:52
  * @Last Modified by:   taochen
- * @Last Modified time: 2016-11-26 19:17:25
+ * @Last Modified time: 2016-11-26 20:11:50
  */
 var $ = require("jquery")
 var echarts = require("echarts")
@@ -547,7 +547,7 @@ $.each($('#tbody tr.n'), function(k, n) {
 
 
 // 实现图表数据联动功能
-line1.on('mouseover', function(params) {
+chart1.on('mouseover', function(params) {
     if (params.componentType === 'series' || params.componentType === 'markPoint') {
         if (params.name != "当前点") {
             var index = params.dataIndex;
@@ -587,12 +587,12 @@ line1.on('mouseover', function(params) {
                             pie1_label_new.push(arr)
                         }
                     })
-                    pie1.setOption({
+                    chart2.setOption({
                         series: [{
                             data: pie1_label_new
                         }]
                     })
-                    bar1.setOption({
+                    chart3.setOption({
                         series: [{
                             data: [(Math.round(v.r * 10000) / 100).toFixed(2)]
                         }]
