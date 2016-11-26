@@ -1,0 +1,164 @@
+<!-- 
+* @Author: taochen
+* @Date:   2016-11-22 19:04:23
+* @Last Modified by:   taochen
+* @Last Modified time: 2016-11-26 19:17:08
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>宽客实验室-资产配置首页</title>
+  <script src="style.bundle.js"></script>
+</head>
+<body>
+  <div id="container">
+    <!--左边主导航-->
+    <div id="left">
+      <div class="logo">
+        <a href="#">宽策略全球智能投顾系统</a>
+      </div>
+      <ul class="main-menu">
+        <li id="tag1">
+          <a href="#"><i class="fa fa-pie-chart"></i>组合概括</a>
+        </li>
+        <li id="tag2">
+          <a href="#"><i class="fa fa-dollar"></i>热点推荐</a>
+        </li>
+        <li id="tag3">
+          <a href="#"><i class="fa fa-user"></i>账户设置</a>
+        </li>
+        <li id="tag4">
+          <a href="#"><i class="fa fa-cogs"></i>智能投资</a>
+        </li>
+        <li id="tag5" class="active">
+          <a href="#"><i class="fa fa-tachometer"></i>宽客实验室</a><i class="triangle"></i>
+        </li>
+        <li id="tag6">
+          <a href="#"><i class="fa fa-database"></i>交易执行</a>
+        </li>
+        <li id="tag7">
+          <a href="#"><i class="fa fa-area-chart"></i>绩效分析</a>
+        </li>
+      </ul>
+    </div>
+    <!--右边主功能区-->
+    <div id="right">
+      <!-- CSS loading加载动画部分 -->
+      <div id="loading">
+        <div class="loader"></div>
+      </div>
+      <!--右边顶部信息栏-->
+      <div class="top" id="topInfo">
+         <div class="row">
+            <div class="col col-5"></div><!-- 用栅格模块占位用 -->
+            <div class="col col-2">
+               <strong id="company">宽策略全球智能投顾</strong>
+            </div>
+            <div class="col col-5">
+               <span>站内信息</span>
+               <a href="#" class="message">0条</a>
+            </div>
+            <div class="col col-10 exit-system">
+               <a class="exit" id="exit"><i class="fa fa-power-off"></i>退出系统</a>
+            </div>
+         </div>
+      </div>
+
+      <!--右边主体区-->
+      <div class="main">
+        <div class="container ful-container">
+          <div class="ac-details-bar">
+              <div class="row chart-container">
+
+                  <!-- 第一张散点图 -->
+                  <div class="col col-2 no-padding">
+                      <div id="chart1" class="big-box">
+                           <div class="chart">
+                               <div id="line1"></div>
+                           </div>
+                      </div>
+                  </div>
+
+                  <!-- 动态饼状图和柱状图 -->
+                  <div class="col col-4 no-padding">
+                      <div id="chart2" class="small2-box">
+                          <div id="pie1"></div>
+                      </div>
+                      <div id="chart3" class="small-box">
+                          <div id="bar1"></div>
+                      </div>
+                  </div>
+
+
+                  <!-- 静态饼状图和柱状图 -->
+                  <div class="col col-4 no-padding">
+                    <div id="chart4" class="small-box">
+                        <div id="pie2"></div>
+                    </div>
+
+                    <div id="chart5" class="small2-box">
+                        <div id="bar2"></div>
+                    </div>
+                  </div>
+
+
+                  <!-- 保守平衡激进三个饼状图 -->
+                  <div class="col col-1 no-padding mup30">
+                    <div id="chart6" class="col col-3 color-box pie-chart style2">
+                      <div id="pie3"></div>
+                    </div>
+
+                    <div id="chart7" class="col col-3 color-box pie-chart style10">
+                      <div id="pie4"></div>
+                    </div>
+
+                    <div id="chart8" class="col col-3 color-box pie-chart style1">
+                      <div id="pie5"></div>
+                    </div>
+                  </div>
+
+                  <!-- 回测数据图 -->
+                  <div class="col col-1 no-padding mup30">
+                      <div id="chart9" class="color-box line-chart style8">
+                        <div id="line2"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="btn-box">
+            <a class="normal-btn">开始配置</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hide-table" id="hide-table">
+    <div class="main">
+       <div class="table-tips" id="an">展开表格</div>
+       <div class="table-cot">
+          <table>
+            <thead>
+              <tr>
+                <th>资产类别</th>
+                <th>当前市值</th>
+                <th>当前权重</th>
+                <th>战略权重</th>
+                <th>配置金额</th>
+                <th>差额</th>
+                <th>模型收益率</th>
+                <th>模型波动率</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+       </div>
+    </div>
+  </div>
+  <script src="app.bundle.js"></script>
+</body>
+</html>
