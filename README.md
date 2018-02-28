@@ -5,7 +5,7 @@
 - 由于有cookie验证，所以这里先用下载的json作为数据源
 
 ## 仿写页面预览
-预览：[demo-qstrategy-brokers](https://chentao92.github.io/demo-qstrategy-brokers/dist/)
+预览：[demo-qstrategy-brokers](https://taylor-chan.github.io/demo-qstrategy-brokers/dist/)
 
 ## 仿写页面实现
 
